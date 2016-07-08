@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+h1 {
+  color: #e62739;
+}
+.nav {
+  background-color: #6ed3cf;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px
+}
+.logo {
+  margin: 0 auto;
+  height: 50px;
+  margin-left: 10px;
+}
