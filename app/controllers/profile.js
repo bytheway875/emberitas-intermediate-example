@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  queryParams: ['allowed-here'],
   name: 'Emberita',
   color: 'green',
   someInformation: Ember.computed('name', 'color', function(){
