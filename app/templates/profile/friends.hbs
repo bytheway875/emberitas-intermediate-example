@@ -1,14 +1,22 @@
-{{#link-to 'profile'}}
-  Hide Squad
-{{/link-to}}
 <div class="squad">
-  <h3>Here is your squad:</h3>
+  {{#link-to 'profile'}}
+    Hide Squad
+  {{/link-to}}
+
+  {{#color-changer tagName='h3' color='brown'}}
+    Here is your squad:
+  {{/color-changer}}
+
+  <ul>
+    {{#each model as |friend|}}
+      {{#color-changer tagName='li' color=friend.favoriteColor}}
+        {{friend.name}}'s favorite color is {{friend.favoriteColor}}.
+      {{/color-changer}}
+    {{/each}}
+  </ul>
+
 </div>
 
-<ul>
-  {{#each model as |friend|}}
-	<li>{{friend.name}} likes {{friend.favoriteColor}}.</li>
-  {{/each}}
-</ul>
-
-{{outlet}}
+<div class="squad-member">
+  {{outlet}}
+</div>

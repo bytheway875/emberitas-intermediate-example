@@ -1,4 +1,6 @@
-<h1 style={{colorStyle}}>Welcome To Ember, {{model.name}}!</h1>
+{{#color-changer tagName='h1' color=model.favoriteColor}}
+	Welcome To Ember, {{model.name}}!
+{{/color-changer}}
 
 <form {{action "setName" newName on="submit"}}>
   <label>What is your new name?</label>
@@ -11,3 +13,5 @@
   {{input value=newColor}}
   <button type="submit">Submit</button>
 </form>
+
+{{outlet}}
