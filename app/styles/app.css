@@ -2,10 +2,67 @@
   margin: 0;
   font-family: Arial;
 }
-
-h1 {
-  color: #e62739;
+body{
+  background: #fff3e9;
 }
+h1, h2, h3, h4, h4, h5, h6 {
+  margin: .75em 0;
+}
+
+p, input {
+  margin: .5em 0;
+}
+
+a {
+  color: #E36551;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button {
+    background-color: #E36551;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    border-radius: 2px;
+}
+
+label {
+  margin-top: 15px;
+  display: block;
+  font-weight: bolder;
+
+}
+
+input {
+  font-size: 1.5em;
+  padding: .25em;
+  margin-top: 0;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #6ed3cf;
+  background-color: transparent;
+  display: block;
+}
+
+input:focus {
+  outline: 0;
+  border: 2px solid #6ed3cf;
+}
+
+form {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 .nav {
   background-color: #6ed3cf;
   height: 50px;
@@ -16,4 +73,34 @@ h1 {
   margin: 0 auto;
   height: 50px;
   margin-left: 10px;
+}
+
+.squad{
+  display: inline-block;
+  width: 45%;
+  padding-right: 20px;
+}
+
+.squad li {
+  border-bottom: 1px solid #e5dad1;
+  width: 100%;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.squad li a {
+  float: right;
+}
+
+.squad ul {
+  padding: 0;
+}
+
+.squad-member{
+  display: inline-block;
+  width: 45%;
+  height: 500px;
+  padding-left: 20px;
+  border-left: 2px solid #E36551;
+  vertical-align: top;
 }
