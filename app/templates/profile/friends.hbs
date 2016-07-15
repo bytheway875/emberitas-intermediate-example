@@ -1,0 +1,14 @@
+{{#link-to 'profile'}}
+  Hide Squad
+{{/link-to}}
+<div class="squad">
+  <h3>Here is your squad:</h3>
+</div>
+
+<ul>
+  {{#each model as |friend|}}
+	<li>{{friend.name}} likes {{friend.favoriteColor}}.</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
