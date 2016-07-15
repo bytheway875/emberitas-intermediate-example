@@ -10,22 +10,31 @@ export default Ember.Controller.extend({
     return Ember.String.htmlSafe("color: " + color);
   }),
   actions: {
+    // two different ways to define promises
     setName(newName){
       this.set('model.name', newName);
-      this.get('model').save();
-      // Warning: this will alert that the model was saved whether the save is successful
-      // or not!!
-      this.alert('The model was saved');
-
+      this.get('model').save().then(
+    	// fulfilled
+    	function() {
+    	  alert('Promise Fulfilled - The model was saved.');
+    	},
+    	// rejected
+    	function() {
+    	  alert('Promise Rejected - The model was not saved.');
+    	}
+      )
     },
     setColor(newColor){
       this.set('model.favoriteColor', newColor);
-      this.get('model').save();
-      // Warning: this will alert that the model was saved whether the save is successful
-      // or Not!!
-      this.alert('The model was saved');
-
-
+      this.get('model').save().then(()=> {
+  	  //fulfilled
+        alert('The model was saved');
+      }).catch(()=> {
+  	  //rejected or error
+        alert('The model was not saved');
+      }).finally(()=> {
+	       console.log(this.get('model.currentState.stateName'));
+      });
     }
   }
 });
