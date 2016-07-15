@@ -6,7 +6,7 @@ export default function() {
 
   this.get('/profiles/:id');
 
-  this.put('/profiles/:id');
+  this.patch('/profiles/:id');
 
   this.del('/posts/:id');
 

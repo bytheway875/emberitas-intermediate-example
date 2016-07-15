@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   color: Ember.computed.readOnly('model.favoriteColor'),
   someInformation: Ember.computed('model.{name,favoriteColor}', function(){
-    return 'Your name is ' + this.get('model.name') + ' and your favorite color is ' + this.get('model.favoriteColor').;
+    return 'Your name is ' + this.get('model.name') + ' and your favorite color is ' + this.get('model.favoriteColor');
   }),
   colorStyle: Ember.computed('color', function() {
     var color = CSS.escape(this.get('color'));

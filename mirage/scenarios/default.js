@@ -1,3 +1,3 @@
 export default function(server) {
-  server.create('profile');
+  server.createList('profile', 5);
 }
