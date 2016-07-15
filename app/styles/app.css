@@ -13,6 +13,9 @@ p, input {
   margin: .5em 0;
 }
 
+.content {
+  margin: 20px;
+}
 a {
   color: #E36551;
   text-decoration: none;

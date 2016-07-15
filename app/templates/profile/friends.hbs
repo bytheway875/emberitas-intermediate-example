@@ -11,8 +11,13 @@
     {{#each model as |friend|}}
       {{#color-changer tagName='li' color=friend.favoriteColor}}
         {{friend.name}}'s favorite color is {{friend.favoriteColor}}.
+        {{#link-to 'profile.friends.edit' friend}}
+          Edit
+        {{/link-to}}
       {{/color-changer}}
+
     {{/each}}
+
   </ul>
 
 </div>
