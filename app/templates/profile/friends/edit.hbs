@@ -1,9 +1,11 @@
-<h4>Here is where we will edit a friend:</h4>
+<h3>Here is where we will {{model.name}}</h3>
 
-<p>Current Name: {{model.name}}</p>
 
-{{#color-changer color=model.favoriteColor}}
-  Current Color: {{model.favoriteColor}}
+{{#color-changer tagName='h4' color=model.favoriteColor}}
+  Favorite Color: {{model.favoriteColor}}
 {{/color-changer}}
+
+{{submit-edit object=model property='name'}}
+{{submit-edit object=model property='favoriteColor'}}
 
 {{outlet}}

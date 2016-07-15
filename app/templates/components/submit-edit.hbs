@@ -1,0 +1,10 @@
+current value: {{currentValue}}
+<br>
+new value: {{newValue}}
+<form {{action "setValue" newValue on="submit"}}>
+  <label>{{labelText}}</label>
+  {{input value=newValue}}
+  <button type="submit">Submit</button>
+</form>
+
+{{yield}}
