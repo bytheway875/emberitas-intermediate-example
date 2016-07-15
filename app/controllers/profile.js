@@ -1,11 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['allowed-here'],
-  name: 'Emberita',
-  color: 'green',
-  someInformation: Ember.computed('name', 'color', function(){
-    return 'Your name is ' + this.get('name') + ' and your favorite color is ' + this.get('color');
+  color: Ember.computed.readOnly('model.favoriteColor'),
+  someInformation: Ember.computed('model.{name,favoriteColor}', function(){
+    return 'Your name is ' + this.get('model.name') + ' and your favorite color is ' + this.get('model.favoriteColor').;
   }),
   colorStyle: Ember.computed('color', function() {
     var color = CSS.escape(this.get('color'));
@@ -13,10 +11,21 @@ export default Ember.Controller.extend({
   }),
   actions: {
     setName(newName){
-      this.set('name', newName);
+      this.set('model.name', newName);
+      this.get('model').save();
+      // Warning: this will alert that the model was saved whether the save is successful
+      // or not!!
+      this.alert('The model was saved');
+
     },
     setColor(newColor){
-      this.set('color', newColor);
+      this.set('model.favoriteColor', newColor);
+      this.get('model').save();
+      // Warning: this will alert that the model was saved whether the save is successful
+      // or Not!!
+      this.alert('The model was saved');
+
+
     }
   }
 });
