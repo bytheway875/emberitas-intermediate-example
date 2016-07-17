@@ -2,7 +2,7 @@
 
 This is the Sample Application for the Intro To Ember workshop at Emberitas Austin on July 16th, 2016.
 
-It continues to be a work in progress. If you find a bug, _feel free to fork the repo and create a PR_ or create a Github Issue and I'll look into it!
+It continues to be a work in progress. If you find a bug, __feel free to fork the repo and create a PR__ or create a Github Issue and I'll look into it!
 
 You may also request new features in Github Issues.
 
