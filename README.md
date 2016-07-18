@@ -1,7 +1,15 @@
-# Emberitas-intermediate
+# Workshop Sample App - Emberitas Intermediate 2016
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the Sample Application for the Intro To Ember workshop at Emberitas Austin on July 16th, 2016. Workshop notes are located [here](http://www.emberitas.com/intermediate/workshop-notes).
+
+It continues to be a work in progress. If you find a bug, __feel free to fork the repo and create a PR__ or create a Github Issue and I'll look into it!
+
+You may also request new features in Github Issues.
+
+## Live Demo Site
+
+Check out the demo site on pagefront:
+https://emberitas-intermediate.pagefrontapp.com/
 
 ## Prerequisites
 
@@ -41,7 +49,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
