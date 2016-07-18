@@ -1,11 +1,10 @@
 <h3>Edit {{model.name}}</h3>
 
-
-{{#color-changer tagName='h4' color=model.favoriteColor label="New Name:"}}
+{{#color-changer tagName='h4' color=model.favoriteColor}}
   Favorite Color: {{model.favoriteColor}}
 {{/color-changer}}
 
-{{submit-edit object=model property='name' label="New Favorite Color"}}
-{{submit-edit object=model property='favoriteColor'}}
+{{submit-edit object=model property='name' label="New Name"}}
+{{submit-edit object=model property='favoriteColor' label="New Favorite Color"}}
 
 {{outlet}}
